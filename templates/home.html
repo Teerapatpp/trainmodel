@@ -1,0 +1,82 @@
+<html>
+<header>
+    <style>
+        body {
+            background-color: #e5e5e5;
+            font-family: verdana;
+        }
+
+        h1 {
+            color: #14213d;
+            text-align: center;
+            font-family: verdana;
+            font-size: 40px;
+            padding: 10px;
+
+        }
+
+        p {
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 50px;
+        }
+
+        input[type=text],
+        select {
+            width: 20%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid rgb(226, 226, 226);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 30%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        div {
+            border-radius: 10px;
+            background-color: #fffefe;
+            padding: 20px;
+            width: 50%;
+        }
+    </style>
+</header>
+
+<body bgcolor=#ffffff>
+
+    <center>
+
+        <h1> Prediction of orchid species </h1><br>
+        <div>
+            <form method="POST" , action="{{url_for('home')}}">
+                <b> Sepal length in cm : <input type="text" , name='a' , placeholder=" "> <br><br>
+                    Sepal Width in cm : <input type="text" , name='b' , placeholder=" "> <br><br>
+                    Petal Length in cm : <input type="text" , name='c' , placeholder=" "> <br><br>
+                    Petal Width in cm : <input type="text" , name='d' , placeholder=" "> <br><br>
+
+                    <br></b>
+
+                <input type="submit" , value='Predict!' ,>
+
+            </form>
+        </div>
+
+
+    </center>
+
+</body>
+
+</html>
